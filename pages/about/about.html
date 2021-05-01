@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calories Burned Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-item>
+    <ion-label> Exercise Activity: </ion-label>
+    <ion-select interface="popover" [(ngModel)]="exercise">
+      <ion-option value=1.3>Sitting at a Desk </ion-option>
+      <ion-option value=2.2>Washing Dishes</ion-option>
+      <ion-option value=3.5>Light Weight Training</ion-option>
+      <ion-option value=5.0>Heavy Weight Training</ion-option>
+      <ion-option value=10>Competitive Soccer</ion-option>
+      <ion-option value=11.5>Running</ion-option>
+    </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Weight in Kilogram:</ion-label>
+  <ion-input type="number" [(ngModel)]="weight"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Duration in Minutes:</ion-label>
+  <ion-input type="number" [(ngModel)]="duration"></ion-input>
+</ion-item>
+
+<button ion-button (click)="CalculateCaloriesBurned(exercise)">CALCULATE</button>
+
+<ion-item *ngIf="BurnedCalories">
+  <h3>Given</h3>
+  <h2>Activity: {{activity}}</h2>
+  <h2>Weight: {{oldweight}} kg</h2>
+  <h2>Duration: {{oldduration}} mins </h2>
+  <br/>
+  <h3>Results:</h3>
+  <h2>Burned Calories: {{BurnedCalories}} cal</h2>
+  <h2>Weight Lost: {{WeightLoss}} kg</h2>
+  </ion-item>
+ 
