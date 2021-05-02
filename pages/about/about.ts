@@ -16,8 +16,8 @@ export class AboutPage {
   BurnedCalories: number;
   WeightLoss    : number;
   activity      : string;
-  photo_src     : string;
-
+  oldmet        : number;
+  oldactivity   : string;
 
 CalculateCaloriesBurned(exercise) {
 
@@ -29,26 +29,25 @@ this.WeightLoss = parseFloat(this.WeightLoss.toFixed(2));
 
 this.oldduration=this.duration;
 this.oldweight=this.weight;
-this.photo_src="https://cdn.jsdelivr.net/gh/RaffySunga/Calories-Burned-Calculator@master/";
+this.oldmet=this.Met;
 
-if (this.Met=1.3) {
-  this.activity="Sitting at a Desk";
-  photo_src=this.photo_src+"Sitting.jpg";}
-else if (this.Met=2.2) {
-  this.activity="Washing Dishes";
-  photo_src=this.photo_src+"WashingDishes.jpg";}
-else if (this.Met=3.5){
-  this.activity="Light Weight Training";
-  this.photo_src=this.photo_src+"LWeight.jpg";}
-else if (this.Met=5.0)
-      {this.activity="Heavy Weight Training";
-      this.photo_src=this.photo_src+"HWeight.jpg";}
-else if (this.Met=10){
-     this.activity="Competitive Soccer";
-     this.photo_src=this.photo_src+"Soccer.jpg";}
+if (this.oldmet=1.3) {
+  this.oldactivity="Sitting at a Desk";
+  }
+else if (this.oldmet=2.2) {
+  this.oldactivity="Washing Dishes";
+  }
+else if (this.oldmet=3.5){
+  this.oldactivity="Light Weight Training";
+ }
+else if (this.oldmet=5.0)
+      {this.oldactivity="Heavy Weight Training";
+      }
+else if (this.oldmet=10){
+     this.oldactivity="Competitive Soccer";
+     }
  else {
-      this.activity="Running";
-      this.photo_src=this.photo_src+"Running.jpg";}
-
+      this.oldactivity="Running";
+      }
 }
 }
