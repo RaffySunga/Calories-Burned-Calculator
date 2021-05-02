@@ -16,8 +16,6 @@ export class AboutPage {
   BurnedCalories: number;
   WeightLoss    : number;
   oldmet        : number;
-  Activity   : string;
-  
   
 CalculateCaloriesBurned(exercise) {
  
